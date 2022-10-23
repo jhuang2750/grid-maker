@@ -5,7 +5,19 @@ let colorSelected;
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    let newRow = document.querySelector("table").insertRow(-1);
+    numRows++;
+    if(numCols==0){
+        let newCell = newRow.insertCell(-1);
+        newCell.onclick = function(){newCell.style.backgroundColor = colorSelected;}
+        numCols++;
+    }
+    else{
+        for(let i=0; i<numCols; i++){
+            let newCell = newRow.insertCell(i);
+            newCell.onclick = function(){newCell.style.backgroundColor = colorSelected;}
+        }
+    }
 }
 
 // Add a column
