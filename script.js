@@ -38,7 +38,9 @@ function addC() {
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    if(numRows>0){
+        document.querySelector("table").deleteRow(-1);
+    } 
 }
 
 // Remove a column
