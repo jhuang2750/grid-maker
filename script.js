@@ -40,12 +40,17 @@ function addC() {
 function removeR() {
     if(numRows>0){
         document.querySelector("table").deleteRow(-1);
+        numRows--;
     } 
 }
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    let rows = document.querySelector("table").getElementsByTagName("tr");
+    for(x of rows){
+        x.deleteCell(-1);
+    }
+    numCols--;
 }
 
 // Set global variable for selected color
