@@ -66,7 +66,6 @@ function fillU(){
         for(x of cells){
             if(x.style.backgroundColor==""){
                 x.style.backgroundColor=colorSelected;
-                console.log(x.style.backgroundColor);
             }
         }
     }
@@ -78,12 +77,14 @@ function fillAll(){
         let cells = document.querySelectorAll("td");
         for(x of cells){
                 x.style.backgroundColor=colorSelected;
-                console.log(x.style.backgroundColor);
         }
     }
 }
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let cells = document.querySelectorAll("td");
+    for(x of cells){
+            x.style.backgroundColor="";
+    }
 }
