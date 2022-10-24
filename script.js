@@ -41,6 +41,9 @@ function removeR() {
     if(numRows>0){
         document.querySelector("table").deleteRow(-1);
         numRows--;
+    }
+    if(numRows<0){
+        numRows=0;
     } 
 }
 
@@ -51,6 +54,9 @@ function removeC() {
         x.deleteCell(-1);
     }
     numCols--;
+    if(numCols<0){
+        numCols=0;
+    }
 }
 
 // Set global variable for selected color
